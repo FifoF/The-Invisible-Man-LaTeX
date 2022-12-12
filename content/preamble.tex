@@ -1,0 +1,72 @@
+\SetTitle{The Invisible Man}
+\SetAuthor{H. G. Wells}
+\SetPDFX[FOGRA39]{X-1a:2001}
+\SetApplication{}
+\SetProducer{}
+
+%\SetTrimSize{6in}{9in}
+\SetMargins{0.625in}{0.625in}{0.625in}{0.75in}     %{top}{outer}{bottom}{inner}
+
+%\SetParentFont[%
+%    Path=content/fonts/,%
+%    SmallCapsFeatures={Renderer=Basic},%
+%    Kerning=On,%
+%    Ligatures=TeX,%
+%    ItalicFont=EBGaramond12-Italic.otf,%
+%    SmallCapsFont=EBGaramondSC12-Regular.otf,%
+%]{EBGaramond12-Regular.otf}
+
+\SetParentFont[%
+    SmallCapsFeatures={Renderer=Basic},%
+    Kerning=On,Ligatures=TeX,%
+]{fbb}% a nice Bembo clone
+\SetMonoFont{Latin Modern Mono} % Libertinus Mono is too wide
+
+\SetHeadFont[Numbers=OldStyle,%
+    Letters=SmallCaps,%
+    Letters=UppercaseSmallCaps,%
+]{\parentfontname}
+\SetVersoHeadText{The\, Invisible\, Man}
+
+\NewFontFace\fancydropcap{fbb}
+\SetDropCapFont{\fancydropcap}
+
+%\microtypesetup{factor=2500}
+\microtypesetup{protrusion=false} % it looks odd with the Bembo font
+
+\usepackage[english]{selnolig}
+\nolig{Th}{T|h} % the Th ligature is rather distracting
+
+\SetChapterStartHeight{13}
+\SetChapterFont[Letters=SmallCaps,Letters=UppercaseSmallCaps,LetterSpace=20,Scale=1.33]{\parentfontname}
+\SetSubchFont[Numbers=Lining,Scale=2.5]{\parentfontname}
+
+\SetFontSize{12pt}
+\SetLinesPerPage{26}
+
+\SetHeadFootStyle{5}
+\SetHeadJump{1.75}
+\SetFootJump{1.75}
+
+\SetPageNumberStyle{--\enspace{}\thepage{}\enspace{}--}
+
+\setdefaultlanguage[variant=british]{english}
+
+\newcommand{\twoemdash}{%
+	\makebox[2em]{\bigemdash}%
+}
+\newcommand{\threeemdash}{%
+	\makebox[3em]{\bigemdash}%
+}
+
+\newcommand{\Mr}[1]{Mr.\ #1}
+\newcommand{\Mrs}[1]{Mrs.\ #1}
+\newcommand{\Ms}[1]{Ms.\ #1}
+\newcommand{\Dr}[1]{Dr.\ #1}
+
+% this comes from the memoir class
+\newcommand*{\midsloppy}{%
+  \tolerance 5000%
+  \hbadness 4000%
+  \emergencystretch 1.5em}
+\newenvironment{midsloppypar}{\par\midsloppy}{\par}
