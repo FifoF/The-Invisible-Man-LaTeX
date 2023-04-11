@@ -277,3 +277,6 @@ TSWLatexianTemp*
 
 # miscellaneous macOS junk
 .DS_Store
+
+# resulting pdf will be under ‘releases’
+The Invisible Man.pdf
